@@ -6,8 +6,11 @@ const apiService = {
     fetchApi(searchQuerry) {
         return fetch(`${this.apiUrl}&q=${searchQuerry}&page=${this.pageNumber}&per_page=${this.resultsPerPage}&key=${this.key}`)
             .then(response => response.json())
-            .then(({ hits }) => hits);
-        console.log(hits);
+            .then(({ hits }) => {
+                console.log(hits);
+                return hits;
+            });
+
     }
 };
 export default apiService;
