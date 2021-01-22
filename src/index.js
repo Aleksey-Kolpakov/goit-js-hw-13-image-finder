@@ -8,6 +8,8 @@ import photoCardtemplate from './templates/image-template.hbs';
 import galeryLightBox from "./js/galeryLightBox"
 import { searcHandler, formGalleryCleaner, loadMoreHandler, refs } from './js/imagesApiHandler';
 
+import './js/pnotify'
+
 refs.searchForm.addEventListener('submit', searcHandler);
 refs.searchFormInput.addEventListener('dblclick', formGalleryCleaner);
 refs.loadMoreButton.addEventListener('click', loadMoreHandler);

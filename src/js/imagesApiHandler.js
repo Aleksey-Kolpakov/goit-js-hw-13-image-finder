@@ -1,4 +1,4 @@
-
+import errorMessage from './pnotify'
 
 import formDataCollect from './formDataCollect';
 
@@ -14,6 +14,10 @@ export const refs = {
 }
 
 function galleryCreating(images) {
+    if (+images.length===0){
+        errorMessage();
+        return; 
+    }
     const imagesMarkup = photoCardtemplate(images);
     refs.ulGallery.insertAdjacentHTML('beforeend', imagesMarkup);
 }
